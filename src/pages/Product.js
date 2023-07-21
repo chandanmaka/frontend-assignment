@@ -8,7 +8,7 @@ async function fetchProduct(id) {
   return data;
 }
 
-function Product() {
+function Product({ open, setOpen }) {
   const { id } = useParams();
   const { data, error, isError, isLoading } = useQuery("product", () =>
     fetchProduct(id)
@@ -20,7 +20,7 @@ function Product() {
       {isError && <div>Error! {error.message}</div>}
       {!isLoading && !isError && (
         <div>
-          <NavBar />
+          <NavBar open={open} setOpen={setOpen} />
           This is a product page for product {id}
         </div>
       )}

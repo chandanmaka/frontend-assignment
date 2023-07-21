@@ -7,7 +7,7 @@ async function fetchProducts() {
   return data;
 }
 
-function Products() {
+function Products({ open, setOpen }) {
   const { data, error, isError, isLoading } = useQuery(
     "products",
     fetchProducts
@@ -19,8 +19,8 @@ function Products() {
       {isError && <p>Error! {error.message}</p>}
       {!isError && !isLoading && (
         <>
-          <NavBar />
-          products
+          <NavBar open={open} setOpen={setOpen} />
+          <div className="mt-16">Products</div>
         </>
       )}
     </div>

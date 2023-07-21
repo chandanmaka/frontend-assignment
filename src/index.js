@@ -9,6 +9,8 @@ const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <QueryClientProvider client={queryClient}>
-    <App />
+    <div className="bg-orange-300 h-screen font-poppins">
+      <App />
+    </div>
   </QueryClientProvider>
 );

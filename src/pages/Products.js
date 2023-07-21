@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import NavBar from "../components/NavBar";
 import axios from "axios";
+import ProductsList from "../components/ProductsList";
 
 async function fetchProducts() {
   const { data } = await axios.get("https://fakestoreapi.com/products");
@@ -15,12 +16,27 @@ function Products({ open, setOpen }) {
   console.log(data);
   return (
     <div>
-      {isLoading && <p>Loading....</p>}
-      {isError && <p>Error! {error.message}</p>}
+      {isLoading && (
+        <>
+          <NavBar open={open} setOpen={setOpen} />
+          <div className="mt-16 text-5xl text-center font-black px-8 text-white flex items-center justify-center h-screen ">
+            Loading.... ⭕
+          </div>
+        </>
+      )}
+
+      {isError && (
+        <>
+          <NavBar open={open} setOpen={setOpen} />
+          <div className="mt-16 text-5xl text-center font-black px-8 text-white flex items-center justify-center h-screen ">
+            Error! {error.message} ❌
+          </div>
+        </>
+      )}
       {!isError && !isLoading && (
         <>
           <NavBar open={open} setOpen={setOpen} />
-          <div className="mt-16">Products</div>
+          <ProductsList products={data}/>
         </>
       )}
     </div>

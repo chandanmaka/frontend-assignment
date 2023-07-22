@@ -21,12 +21,13 @@ To set up the project locally, follow these steps:
    cd front-assignment
 
 2. Install the dependencies:
+   ```react
    npm install
 
-3. Start locally :
+4. Start locally :
    npm start
 
-4. Open in browser :
+5. Open in browser :
    http://localhost:3000
 
 Happy coding! 😄

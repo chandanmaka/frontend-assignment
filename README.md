@@ -16,6 +16,7 @@ Link : https://online-store-by-chandan.netlify.app/
 To set up the project locally, follow these steps:
 
 1. Clone the repository:
+   ```bash
    git clone https://github.com/chandanmaka/frontend-assignment.git
    cd front-assignment
 

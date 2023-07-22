@@ -11,3 +11,21 @@ Link : https://online-store-by-chandan.netlify.app/
 ![Alt text](image-1.png)
 
 ![Alt text](image-2.png)
+
+**Installation**
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+   git clone https://github.com/chandanmaka/frontend-assignment.git
+   cd front-assignment
+
+2. Install the dependencies:
+   npm install
+
+3. Start locally :
+   npm start
+
+4. Open in browser :
+   http://localhost:3000
+
+Happy coding! 😄

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { useQuery } from "react-query";
 import axios from "axios";
+import ProductDetail from "../components/ProductDetail";
 
 async function fetchProduct(id) {
   const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`);
@@ -21,7 +22,8 @@ function Product({ open, setOpen }) {
       {!isLoading && !isError && (
         <div>
           <NavBar open={open} setOpen={setOpen} />
-          This is a product page for product {id}
+          <ProductDetail product={data}/>
+          
         </div>
       )}
     </>

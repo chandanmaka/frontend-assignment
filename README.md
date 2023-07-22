@@ -25,6 +25,7 @@ To set up the project locally, follow these steps:
    npm install
 
 4. Start locally :
+   ```react
    npm start
 
 5. Open in browser :
